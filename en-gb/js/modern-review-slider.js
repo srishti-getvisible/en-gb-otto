@@ -24,15 +24,6 @@ $(document).ready(function() {
             $slides.eq(index).addClass('w-active').attr('aria-hidden', 'false');
             $dots.eq(index).addClass('w-active').attr('aria-pressed', 'true');
             
-            // Update slide position for smooth transition
-            var slideWidth = $slides.first().outerWidth();
-            var translateX = -index * slideWidth;
-            
-            $slides.css({
-                'transform': 'translateX(' + translateX + 'px)',
-                'transition': 'transform 500ms ease'
-            });
-            
             currentSlide = index;
             
             // Update aria labels

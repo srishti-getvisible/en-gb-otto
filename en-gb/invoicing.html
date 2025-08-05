@@ -4,7 +4,7 @@
     data-wf-domain="otto-ai2.webflow.io"
     data-wf-page="68136647ed669c6409422be0"
     data-wf-site="66d80d61bcbc2701c640232c"
-    lang="es"
+    lang="en-gb"
     class="w-mod-js w-mod-ix wf-materialicons-n4-active wf-poppins-n4-active wf-poppins-n5-active wf-poppins-n6-active wf-poppins-n7-active wf-active">
     <head>
       <meta
@@ -215,6 +215,45 @@ defer="">
       }
       .ot-faq-icon.active {
       transform: rotate(0deg);
+      }
+      
+      /* Review Slider Styles */
+      .ot-review-slides {
+        transition: all 0.8s ease-in-out;
+        position: relative;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(20px);
+        display: none;
+      }
+
+      .ot-review-slides:not([aria-hidden="true"]) {
+        opacity: 1;
+        transform: translateY(0);
+        display: block;
+      }
+
+      .ot-review-slider-mask {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .ot-review-slider {
+        position: relative;
+        width: 100%;
+      }
+
+      /* Hide inactive slides */
+      .ot-review-slides[aria-hidden="true"] {
+        display: none;
+        opacity: 0;
+      }
+
+      /* Show active slide */
+      .ot-review-slides:not([aria-hidden="true"]) {
+        display: block;
+        opacity: 1;
       }
     </style>
     <meta
@@ -2821,27 +2860,18 @@ Straight from our customers—how Otto is changing the way creative businesses m
 </p>
 </div>
 <div
-data-delay="3000"
-data-animation="slide"
-class="ot-review-slider w-slider"
+class="ot-review-slider"
 data-autoplay="true"
-data-easing="ease"
-data-hide-arrows="false"
-data-disable-swipe="false"
-data-autoplay-limit="0"
-data-nav-spacing="3"
-data-duration="500"
-data-infinite="true"
 role="region"
 aria-label="carousel">
 <div
-class="ot-review-slider-mask w-slider-mask"
+class="ot-review-slider-mask"
 id="w-slider-mask-0">
 <div
-class="ot-review-slides w-slide"
+class="ot-review-slides w-active"
 aria-label="1 of 3"
 role="group"
-style="transition: all, transform 500ms; transform: translateX(0px); opacity: 1;">
+aria-hidden="false">
 <div
 class="ot-review-slide-block">
 <div
@@ -2861,7 +2891,7 @@ class="ot-bm-athor-block">
 <div
 class="ot-bm-author-img-block">
 <img
-src="/en-gb/images/67cab19ee6280a58dfe72b75_preston-tietjen.png"
+src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/67cab0c0fc7949623b7eef7d_Add%20a%20heading.png"
 loading="lazy"
 width="38"
 height="38"
@@ -2884,10 +2914,9 @@ Illustrator & Designer
 </div>
 </div>
 <div
-class="ot-review-slides w-slide"
+class="ot-review-slides"
 aria-label="2 of 3"
 role="group"
-style="transition: all, transform 500ms; transform: translateX(0px); opacity: 1;"
 aria-hidden="true">
 <div
 class="ot-review-slide-block"
@@ -2915,7 +2944,7 @@ aria-hidden="true">
 class="ot-bm-author-img-block"
 aria-hidden="true">
 <img
-src="/en-gb/images/67cab0c0fc7949623b7eef7d_Add a heading.png"
+src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/67cab19e9b89328cfdf3e3f7_kai-byrd.png"
 loading="lazy"
 width="38"
 height="38"
@@ -2942,10 +2971,9 @@ Photographer, Creative Director
 </div>
 </div>
 <div
-class="ot-review-slides w-slide"
+class="ot-review-slides"
 aria-label="3 of 3"
 role="group"
-style="transition: all, transform 500ms; transform: translateX(-3258px); opacity: 1;"
 aria-hidden="true">
 <div
 class="ot-review-slide-block"
@@ -2973,7 +3001,7 @@ aria-hidden="true">
 class="ot-bm-author-img-block"
 aria-hidden="true">
 <img
-src="/en-gb/images/67cab19e9b89328cfdf3e3f7_kai-byrd.png"
+src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/67cab19ee6280a58dfe72b75_preston-tietjen.png"
 loading="lazy"
 width="38"
 height="38"

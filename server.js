@@ -96,4 +96,5 @@ server.listen(PORT, () => {
   console.log('You can now access:');
   console.log('- http://localhost:3000/en-gb/');
   console.log('- http://localhost:3000/en-gb/invoicing');
+  console.log('- http://localhost:3000/en-gb/bookkeeping');
 }); 
