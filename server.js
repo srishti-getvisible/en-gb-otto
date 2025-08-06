@@ -90,11 +90,11 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const PORT = 3000;
+const PORT = 3001;
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
   console.log('You can now access:');
-  console.log('- http://localhost:3000/en-gb/');
-  console.log('- http://localhost:3000/en-gb/invoicing');
-  console.log('- http://localhost:3000/en-gb/bookkeeping');
+  console.log(`- http://localhost:${PORT}/en-gb/`);
+  console.log(`- http://localhost:${PORT}/en-gb/invoicing`);
+  console.log(`- http://localhost:${PORT}/en-gb/bookkeeping`);
 }); 
