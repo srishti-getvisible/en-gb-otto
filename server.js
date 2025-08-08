@@ -6,6 +6,14 @@ const url = require('url');
 const server = http.createServer((req, res) => {
   let filePath = decodeURIComponent(url.parse(req.url).pathname);
   
+  // Redirect .html URLs to clean URLs
+  if (filePath.endsWith('.html') && filePath !== '/index.html') {
+    const cleanUrl = filePath.replace(/\.html$/, '');
+    res.writeHead(301, { 'Location': cleanUrl });
+    res.end();
+    return;
+  }
+  
   // Remove trailing slash
   if (filePath.endsWith('/') && filePath !== '/') {
     filePath = filePath.slice(0, -1);
